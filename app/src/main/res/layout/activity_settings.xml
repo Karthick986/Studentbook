@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lout"
+        android:layout_centerVertical="true"
+        android:text="Logout"
+        android:background="@drawable/oval"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+
+</RelativeLayout>

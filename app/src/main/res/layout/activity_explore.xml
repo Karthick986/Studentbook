@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDefault"
+    tools:context=".ExploreActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/explore_toolbar"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Explore here"
+        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
+        android:textSize="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/bottom_navexplore"
+            app:itemBackground="@android:color/white"
+            android:background="?android:attr/windowBackground"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/menu_botnavigation"/>
+    </RelativeLayout>
+</RelativeLayout>

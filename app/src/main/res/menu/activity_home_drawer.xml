@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_notices"
+            android:icon="@drawable/ic_notifications"
+            android:title="College Noitces" />
+        <item
+            android:id="@+id/nav_shoppe"
+            android:icon="@drawable/ic_shoppe"
+            android:title="College Shoppe" />
+        <item
+            android:id="@+id/nav_learn"
+            android:icon="@drawable/ic_learn"
+            android:title="Learn" />
+    </group>
+
+    <item android:title="Personal">
+        <menu>
+            <item
+                android:id="@+id/nav_schedule"
+                android:icon="@drawable/ic_alarm"
+                android:title="Scheduler" />
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="Profile" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

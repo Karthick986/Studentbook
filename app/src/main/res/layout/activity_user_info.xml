@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInfoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_margin="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:padding="1dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/userInfoImage"
+            app:civ_border_color="@color/colorPrimary"
+            android:src="@drawable/navhuman"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInfoname"
+            android:layout_toEndOf="@id/userInfoImage"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInforole"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/userInfoname"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="3dp"
+            android:layout_toEndOf="@id/userInfoImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInfoCollege"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/userInfoImage"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="3dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInfobranch"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/userInfoCollege"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="3dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInfoSem"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/userInfobranch"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="3dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInfoother"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/userInfobranch"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="3dp"
+            android:layout_toEndOf="@id/userInfoImage" />
+    </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

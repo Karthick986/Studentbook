@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorDefault"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:padding="1dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/homeComProImage"
+            app:civ_border_color="@color/colorPrimary"
+            android:src="@drawable/navhuman"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeComUsername"
+            android:layout_toEndOf="@id/homeComProImage"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shareHomeComments"
+            android:textSize="15sp"
+            android:layout_below="@id/homeComUsername"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="3dp"
+            android:layout_toEndOf="@id/homeComProImage" />
+    </RelativeLayout>
+</FrameLayout>

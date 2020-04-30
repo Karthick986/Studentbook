@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    android:background="@android:color/white"
+    tools:context=".HomepostClickActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollComment"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentTop="true"
+        android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gendescHomeClick"
+        android:layout_marginTop="1dp"
+        android:padding="1dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/homeClickProImage"
+            app:civ_border_color="@color/colorPrimary"
+            android:src="@drawable/navhuman"
+            app:civ_border_width="1dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeClickUsername"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userClickHomepost"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:background="@drawable/homepost_border"
+        android:layout_below="@id/gendescHomeClick">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeClickDescp"
+            android:padding="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:textAlignment="textStart"
+            android:textSize="17sp"
+            android:textColor="@android:color/black" />
+
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeClickPostimage"
+            android:layout_below="@id/homeClickDescp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progresshomeClick"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"/>
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loadingComments"
+            android:layout_below="@id/userClickHomepost"
+            android:background="@android:color/white"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/commentsfromHome"
+                android:padding="3dp"
+                android:text="Loading Recent Comments..."
+                android:textSize="18sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/homecomRecycler"
+                android:padding="3dp"
+                android:layout_below="@id/commentsfromHome"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeComerel"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/newscomments_pro"
+            app:civ_border_color="@color/colorPrimary"
+            android:src="@drawable/navhuman"
+            app:civ_border_width="1dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shareComments"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/newscomments_pro"
+            android:background="@drawable/homepost_border"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/homecom_fab"
+            android:padding="3dp"
+            android:hint="Share your views"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/homecom_fab"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="3dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_send_comsend"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

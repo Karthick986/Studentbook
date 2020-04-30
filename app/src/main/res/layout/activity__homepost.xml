@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gendescHome"
+            android:layout_marginTop="1dp"
+            android:padding="1dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/homeProImage"
+                app:civ_border_color="@color/colorPrimary"
+                android:src="@drawable/navhuman"
+                app:civ_border_width="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/homeUsername"
+                    android:textStyle="bold"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/homeRole"
+                        android:layout_marginTop="1dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="17dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/homeDate"
+                        android:textSize="15dp"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="textEnd"
+                        android:layout_marginRight="3dp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userHomepost"
+            android:layout_below="@id/gendescHome">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeDescp"
+            android:padding="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:textAlignment="textStart"
+            android:textSize="17dp"
+            android:textColor="@android:color/black" />
+
+        <com.zolad.zoominimageview.ZoomInImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/homePostimage"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/homeDescp"
+            android:layout_marginTop="5dp"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:layout_gravity="center"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeLikes"
+            android:layout_below="@id/userHomepost"
+            android:padding="3dp"
+            android:background="@drawable/homepost_border"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeComment"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginStart="50dp"
+                android:layout_alignParentStart="true"
+                android:drawableStart="@drawable/ic_message"
+                android:drawablePadding="5dp"
+                android:text="Comment"
+                android:textSize="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeShare"
+                android:textColor="@color/colorPrimary"
+                android:text="Share"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_menu_share"
+                android:layout_alignParentEnd="true"
+                android:textSize="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="50dp" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hometimepost"
+            android:layout_below="@id/homeLikes"
+            android:layout_marginStart="3dp"
+            android:textSize="15sp"
+            android:layout_marginTop="1dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:id="@+id/homeMore"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_more_vert" />
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

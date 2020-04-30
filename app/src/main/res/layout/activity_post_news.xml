@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".PostNewsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/postNews_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtpost_news"
+        android:layout_below="@id/postNews_toolbar"
+        android:text="Share bulletin"
+        android:layout_marginTop="3dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtpost_news"
+        android:layout_marginTop="5dp"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/post_image"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lin_postnews"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/post_image"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/postnews_pro"
+                    android:layout_centerVertical="true"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:src="@drawable/navhuman"
+                    app:civ_border_width="1dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_post"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:background="@drawable/homepost_border"
+                android:layout_marginStart="5dp"
+                android:hint="Write something"
+                android:layout_toRightOf="@id/postnews_pro" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lin_selectnews"
+                android:layout_below="@id/lin_postnews">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clearDescp_postnews"
+                    android:textAllCaps="false"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Clear text"
+                    android:textSize="15sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chooseinnews"
+                android:textAllCaps="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Choose file"
+                android:textSize="15sp" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/postnews"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:textAllCaps="false"
+                android:background="@drawable/oval"
+                android:text="Post"
+                android:textSize="25dp"
+                android:layout_below="@id/lin_selectnews"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

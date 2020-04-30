@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "116761564934",
+    "firebase_url": "https://studentbook-21acd.firebaseio.com",
+    "project_id": "studentbook-21acd",
+    "storage_bucket": "studentbook-21acd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116761564934:android:c6bb6ea18cf2e336aab087",
+        "android_client_info": {
+          "package_name": "our.miniproject.studentbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116761564934-v19uikejba7m0as6q7ad02qhfoijl5hj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkHGdMHWfK97NZQeXbPPn0OX5X-_5OV54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116761564934-v19uikejba7m0as6q7ad02qhfoijl5hj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

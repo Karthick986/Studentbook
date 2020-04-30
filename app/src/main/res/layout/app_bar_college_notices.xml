@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollegeNotices">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/notice_toolbar"
+                android:layout_width="match_parent"
+                app:titleTextColor="@android:color/white"
+                app:subtitleTextColor="@android:color/white"
+                android:layout_height="50dp"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userNoticeslogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:civ_border_color="@android:color/black"
+                app:civ_border_width="3dp"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/navhuman" />
+
+            <ImageView
+                android:id="@+id/user_drawer"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
+                android:layout_marginStart="30dp"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_menu_drawer" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_college_notices" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_notice_adder" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

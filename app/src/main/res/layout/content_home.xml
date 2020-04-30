@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:background="@color/colorDefault"
+    tools:context=".HomeActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_home">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/refreshhome">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeRecycler"
+            android:padding="5dp"/>
+         </RelativeLayout>
+                </ScrollView>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior=".ScrollfabBehavior"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="5dp"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@drawable/ic_news_adder"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom_nav"
+        android:padding="1dp"
+        android:fitsSystemWindows="true"
+        android:backgroundTint="@color/colorDefault"
+        app:itemBackground="@android:color/white"
+        android:background="?android:attr/windowBackground"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_botnavigation"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
